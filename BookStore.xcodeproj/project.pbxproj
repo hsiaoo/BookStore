@@ -11,6 +11,7 @@
 		8568C9CE26F983C200752453 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9CD26F983C200752453 /* LibraryViewController.swift */; };
 		8568C9D026F9888200752453 /* LibraryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9CF26F9888200752453 /* LibraryCategory.swift */; };
 		8568C9D226F9CFFE00752453 /* LibrarySubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */; };
+		8568C9D726FA217100752453 /* LibraryBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9D626FA217100752453 /* LibraryBooksViewController.swift */; };
 		85AA7EA826F869D300558298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7EA726F869D300558298 /* AppDelegate.swift */; };
 		85AA7EAA26F869D300558298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7EA926F869D300558298 /* SceneDelegate.swift */; };
 		85AA7EAF26F869D300558298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AA7EAD26F869D300558298 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		8568C9CD26F983C200752453 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		8568C9CF26F9888200752453 /* LibraryCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCategory.swift; sourceTree = "<group>"; };
 		8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrarySubCategoryViewController.swift; sourceTree = "<group>"; };
+		8568C9D626FA217100752453 /* LibraryBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBooksViewController.swift; sourceTree = "<group>"; };
 		85AA7EA426F869D300558298 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AA7EA726F869D300558298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AA7EA926F869D300558298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				8568C9CB26F892B800752453 /* OverviewViewController.swift */,
 				8568C9CD26F983C200752453 /* LibraryViewController.swift */,
 				8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */,
+				8568C9D626FA217100752453 /* LibraryBooksViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				8568C9D226F9CFFE00752453 /* LibrarySubCategoryViewController.swift in Sources */,
 				85AA7EC826F880F300558298 /* Book.swift in Sources */,
+				8568C9D726FA217100752453 /* LibraryBooksViewController.swift in Sources */,
 				85AA7EA826F869D300558298 /* AppDelegate.swift in Sources */,
 				85AA7EC426F87A8400558298 /* HorizontalCollectionView.swift in Sources */,
 				8568C9D026F9888200752453 /* LibraryCategory.swift in Sources */,
@@ -376,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XQUK5U76MX;
-				INFOPLIST_FILE = BookStore/Info.plist;
+				INFOPLIST_FILE = BookStore/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XQUK5U76MX;
-				INFOPLIST_FILE = BookStore/Info.plist;
+				INFOPLIST_FILE = BookStore/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
