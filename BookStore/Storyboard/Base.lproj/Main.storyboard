@@ -35,7 +35,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6Z-mA-rH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352.1739130434785" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="1319" y="1418"/>
         </scene>
         <!--概覽-->
         <scene sceneID="Xhg-M0-4FK">
@@ -316,7 +316,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQf-GX-IVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442.02898550724643" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="409" y="1418"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fn0-Qv-UEg">
