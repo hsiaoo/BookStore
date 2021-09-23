@@ -56,6 +56,13 @@ extension HorizontalCollectionView: UICollectionViewDataSource, UICollectionView
         cell.updateUI(title: book.title, author: book.author)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let book = books[indexPath.row]
+        let bookDetailController = BookDetailViewController(book: book)
+        self.navigationController?.pushViewController(bookDetailController, animated: true)
+    }
 }
 
 extension HorizontalCollectionView: UICollectionViewDelegateFlowLayout

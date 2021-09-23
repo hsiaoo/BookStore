@@ -50,9 +50,20 @@ class BookDetailViewController: UIViewController
         
         bookTitleLabel.text = book.title
         authorLabel.text = book.author
-        publicationDateLabel.text = "\(book.publicationDate) 出版"
+        publicationDateLabel.text = "\(book.publicationDate) 出版  /"
         fileTypeLabel.text = "\(book.fileType.rawValue)  /"
         pagesLabel.text = "\(book.pages.description)頁"
-        descriptionTextView.text = book.description
+        descriptionTextView.attributedText = makeTextStyle(text: book.description)
+    }
+    
+    private func makeTextStyle(text: String) -> NSAttributedString
+    {
+        // 設定文章段落的樣式
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineSpacing = 3.0
+        
+        // 生成attributedString並回傳
+        let attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.paragraphStyle : paragraph])
+        return attributedText
     }
 }
