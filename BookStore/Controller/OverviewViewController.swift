@@ -28,9 +28,9 @@ class OverviewViewController: UIViewController
             self.addChild(group)
             group.didMove(toParent: self)
             
-            // group貼進stackView後再設定constraints，放在stackView.addArrangedSubview之前會出錯，因為view階層關係有問題
+            // group貼進stackView後才設定constraints。若在stackView.addArrangedSubview之前設定constrains會出錯，因為view階層關係有問題
             group.view.translatesAutoresizingMaskIntoConstraints = false
-            group.view.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.4).isActive = true
+            group.view.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9).isActive = true
         }
     }
 }
