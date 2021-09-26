@@ -19,7 +19,13 @@ class OverviewViewController: UIViewController
         createGroups()
     }
     
-    func createGroups()
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        checkLoginStatus()
+    }
+    
+    private func createGroups()
     {
         for title in groupsTitle
         {
@@ -32,6 +38,27 @@ class OverviewViewController: UIViewController
             group.view.translatesAutoresizingMaskIntoConstraints = false
             group.view.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9).isActive = true
         }
+    }
+    
+    private func checkLoginStatus()
+    {
+        // 判斷使用者是否登入
+        if (UserDefaults.standard.object(forKey: "em") as? String) != nil
+        {
+            // 使用者已登入
+            self.navigationItem.rightBarButtonItem = nil
+        }
+        else
+        {
+            // 使用者未登入，建立右上角的登入按鈕
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: self, action: #selector(login))
+        }
+    }
+    
+    @objc func login()
+    {
+        let loginViewController = LoginViewController()
+        self.navigationController?.pushViewController(loginViewController, animated: true)
     }
 }
 

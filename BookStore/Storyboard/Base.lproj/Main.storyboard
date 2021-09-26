@@ -101,9 +101,7 @@
                             <constraint firstItem="9t7-Xt-X35" firstAttribute="trailing" secondItem="XmT-rd-rVr" secondAttribute="trailing" id="ZkV-Dl-wcs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="台灣雲端書庫" id="o6C-YJ-WP1">
-                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" id="HoG-MY-eqB"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="台灣雲端書庫" id="o6C-YJ-WP1"/>
                     <connections>
                         <outlet property="stackView" destination="oXO-i8-yjQ" id="QWd-qW-pTI"/>
                     </connections>

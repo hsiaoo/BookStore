@@ -1,0 +1,179 @@
+//
+//  LoginViewController.swift
+//  BookStore
+//
+//  Created by H.W. Hsiao on 2021/9/25.
+//
+
+import UIKit
+import SafariServices
+
+class LoginViewController: UIViewController
+{
+    @IBOutlet weak var libraryTextField: UITextField!
+    @IBOutlet weak var emTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+        
+        textFieldConfigure()
+        
+        registerKeyboardNotification()
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton)
+    {
+        // 返回上一頁，要顯示tab bar和navigation bar
+        navigationController?.navigationBar.isHidden = false
+        tabBarController?.tabBar.isHidden = false
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tappedLoginButton(_ sender: UIButton)
+    {
+    }
+    
+    @IBAction func tappedSignUpButton(_ sender: UIButton)
+    {
+        if let url = URL(string: "https://www.ebookservice.tw/#membership/intro")
+        {
+            let safariViewController = SFSafariViewController(url: url)
+            self.navigationController?.present(safariViewController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func tappedForgetPwButton(_ sender: UIButton)
+    {
+        if let url = URL(string: "https://www.ebookservice.tw/#membership/forget-password")
+        {
+            let safariViewController = SFSafariViewController(url: url)
+            self.navigationController?.present(safariViewController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func tappedLearnMoreButton(_ sender: UIButton)
+    {
+        let learnMoreLabel = UILabel()
+        learnMoreLabel.textColor = .label
+        learnMoreLabel.numberOfLines = 0
+        learnMoreLabel.text =
+ """
+【台灣雲端書庫@公共圖書館、學校、企業】
+
+- 【台灣雲端書庫】與各城市及推廣閱讀單位合作，輔助公共圖書館及學校、企業圖書館，提供電子書／雜誌線上借閱服務。
+- 若您已是【台灣雲端書庫】合作之圖書館單位的讀者，請依該圖書館單位提供給您的帳號與密碼登入；讀者每次借閱電子書／雜誌期限為14天，到期後系統會自動歸還。
+
+【台灣雲端書庫】所有內容均來自出版機構合法授權，並且擁有著作權人授與電子版權的出版發行權利，若有第三者提出異議產生法律糾紛，本公司願意負擔所有相關責任。
+
+服務信箱：service@ebookservice.tw
+電話：+886-02-2392-6899#766
+"""
+        
+        let learnMoreViewController = UIViewController()
+        learnMoreViewController.view.backgroundColor = .systemBackground
+        learnMoreViewController.view.addSubview(learnMoreLabel)
+        
+        learnMoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        learnMoreLabel.centerYAnchor.constraint(equalTo: learnMoreViewController.view.centerYAnchor).isActive = true
+        learnMoreLabel.leadingAnchor.constraint(equalTo: learnMoreViewController.view.leadingAnchor, constant: 16).isActive = true
+        learnMoreLabel.trailingAnchor.constraint(equalTo: learnMoreViewController.view.trailingAnchor, constant: -16).isActive = true
+        self.navigationController?.present(learnMoreViewController, animated: true, completion: nil)
+    }
+    
+    func textFieldConfigure()
+    {
+        // text edge inset
+        libraryTextField.leftView = UIView(frame: (CGRect(x: 0, y: 0, width: 6, height: libraryTextField.frame.size.height)))
+        emTextField.leftView = UIView(frame: (CGRect(x: 0, y: 0, width: 6, height: emTextField.frame.size.height)))
+        pwTextField.leftView = UIView(frame: (CGRect(x: 0, y: 0, width: 6, height: pwTextField.frame.size.height)))
+        libraryTextField.leftViewMode = .always
+        emTextField.leftViewMode = .always
+        pwTextField.leftViewMode = .always
+        
+        // textField cornerRadius
+        libraryTextField.layer.cornerRadius = 10
+        emTextField.layer.cornerRadius = 10
+        pwTextField.layer.cornerRadius = 10
+        
+        libraryTextField.layer.masksToBounds = true
+        emTextField.layer.masksToBounds = true
+        pwTextField.layer.masksToBounds = true
+        
+        libraryTextField.layer.borderWidth = 1
+        emTextField.layer.borderWidth = 1
+        pwTextField.layer.borderWidth = 1
+        
+        libraryTextField.layer.borderColor = UIColor.lightGray.cgColor
+        emTextField.layer.borderColor = UIColor.lightGray.cgColor
+        pwTextField.layer.borderColor = UIColor.lightGray.cgColor
+        
+        // 以pickerView取代libraryTextField的keyboard
+        let picker = UIPickerView()
+        picker.dataSource = self
+        picker.delegate = self
+        libraryTextField.inputView = picker
+    }
+    
+    func registerKeyboardNotification()
+    {
+        // 這裡要使用"will show"和"will hide"，才能在鍵盤出現與消失的同時上下移動view。若使用"did show和did hide"，動作看起來是分割的，鍵盤消失時甚至會有黑影
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification)
+    {
+        guard let keyboardSize = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        self.view.frame.origin.y = 0 // 每次都先讓View回到原點(0,0)
+        self.view.frame.origin.y -= keyboardSize.height // 再調整view的y點，若沒有先回到原點，畫面可能會一直往上升，就會出現黑影
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification)
+    {
+        self.view.frame.origin.y = 0
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // 按下Return鍵後關閉keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension LoginViewController: UIPickerViewDataSource, UIPickerViewDelegate
+{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return Libraries.libraries.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return Libraries.libraries[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if row == 0
+        {
+            libraryTextField.text = Libraries.libraries[row]
+        }
+        else
+        {
+            libraryTextField.text = "台灣雲端書庫@\(Libraries.libraries[row])"
+        }
+    }
+}
