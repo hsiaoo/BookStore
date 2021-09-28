@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8539D92627034D9D00EA39FD /* ShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539D92527034D9D00EA39FD /* ShelfViewController.swift */; };
 		85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */; };
 		85641A9226FF2A1A00EF5D32 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85641A9026FF2A1A00EF5D32 /* LoginViewController.xib */; };
 		85641A9627006BED00EF5D32 /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85641A9527006BED00EF5D32 /* Libraries.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8539D92527034D9D00EA39FD /* ShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfViewController.swift; sourceTree = "<group>"; };
 		85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85641A9026FF2A1A00EF5D32 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		85641A9527006BED00EF5D32 /* Libraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				8568C9CD26F983C200752453 /* LibraryViewController.swift */,
 				8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */,
 				8568C9D626FA217100752453 /* LibraryBooksViewController.swift */,
+				8539D92527034D9D00EA39FD /* ShelfViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */,
+				8539D92627034D9D00EA39FD /* ShelfViewController.swift in Sources */,
 				8568C9D226F9CFFE00752453 /* LibrarySubCategoryViewController.swift in Sources */,
 				85AA7EC826F880F300558298 /* Book.swift in Sources */,
 				8568C9D726FA217100752453 /* LibraryBooksViewController.swift in Sources */,

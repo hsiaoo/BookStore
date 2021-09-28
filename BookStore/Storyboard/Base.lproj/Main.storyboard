@@ -9,35 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--我的書櫃-->
-        <scene sceneID="MDL-Iy-Y2e">
-            <objects>
-                <tableViewController id="yjw-jF-2LG" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aPs-Co-zqd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="x8a-5V-5cI">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x8a-5V-5cI" id="oP9-m0-pOZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yjw-jF-2LG" id="Ifo-XU-0M0"/>
-                            <outlet property="delegate" destination="yjw-jF-2LG" id="gYX-LC-zkj"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="我的書櫃" id="C6q-J9-EWN"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t6Z-mA-rH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1319" y="1418"/>
-        </scene>
         <!--概覽-->
         <scene sceneID="Xhg-M0-4FK">
             <objects>
@@ -310,12 +281,67 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yjw-jF-2LG" kind="relationship" relationship="rootViewController" id="zvw-Kf-HIi"/>
+                        <segue destination="cLs-P3-cb9" kind="relationship" relationship="rootViewController" id="cC1-gS-eSN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQf-GX-IVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="409" y="1418"/>
+        </scene>
+        <!--我的書櫃-->
+        <scene sceneID="ziO-up-ThB">
+            <objects>
+                <viewController id="cLs-P3-cb9" customClass="ShelfViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yc4-ga-gjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cd-k3-m7L">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-8G-PEa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxM-eK-TDw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="8Ij-Mb-LAF"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ptM-8G-PEa" firstAttribute="bottom" secondItem="mmt-yy-5ED" secondAttribute="bottom" id="29h-Hf-dyB"/>
+                                    <constraint firstItem="ptM-8G-PEa" firstAttribute="leading" secondItem="mmt-yy-5ED" secondAttribute="leading" id="LzQ-cw-Wej"/>
+                                    <constraint firstItem="ptM-8G-PEa" firstAttribute="trailing" secondItem="mmt-yy-5ED" secondAttribute="trailing" id="ML9-rg-7qv"/>
+                                    <constraint firstItem="ptM-8G-PEa" firstAttribute="top" secondItem="mmt-yy-5ED" secondAttribute="top" id="Tc0-fw-PAS"/>
+                                    <constraint firstItem="ptM-8G-PEa" firstAttribute="width" secondItem="1cd-k3-m7L" secondAttribute="width" id="hfG-5J-pGD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mmt-yy-5ED"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="KQP-vk-Uox"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dFz-Jl-Zyi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1cd-k3-m7L" firstAttribute="trailing" secondItem="dFz-Jl-Zyi" secondAttribute="trailing" id="Bkr-Vu-V19"/>
+                            <constraint firstItem="1cd-k3-m7L" firstAttribute="leading" secondItem="dFz-Jl-Zyi" secondAttribute="leading" id="bBP-Db-40w"/>
+                            <constraint firstItem="1cd-k3-m7L" firstAttribute="top" secondItem="dFz-Jl-Zyi" secondAttribute="top" id="sD0-KO-G9e"/>
+                            <constraint firstItem="1cd-k3-m7L" firstAttribute="bottom" secondItem="dFz-Jl-Zyi" secondAttribute="bottom" id="trP-jy-65e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的書櫃" id="jCm-lK-18X">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="Bnc-ji-Qph"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="stackView" destination="ptM-8G-PEa" id="QN7-Ny-DYZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBh-9L-XNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318.840579710145" y="1417.6339285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fn0-Qv-UEg">
@@ -342,6 +368,7 @@
     <resources>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="DarkGrayButtonColor100">
             <color red="0.37299999594688416" green="0.33300000429153442" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

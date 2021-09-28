@@ -31,7 +31,7 @@ class HorizontalCollectionView: UIViewController
         // 抓取樣本書籍
         if books.isEmpty
         {
-            books = Book.BookSample            
+            books = Book.sampleBooks            
         }
         
         // Register BookCollectionViewCell
@@ -69,10 +69,10 @@ extension HorizontalCollectionView: UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        //cell width: 螢幕寬*142/375
-        //cell height: group高度*0.75(一個大概的比例)
-        let screenWidth = self.view.frame.width
-        let groupHeight = self.view.frame.height
-        return CGSize(width: screenWidth*142/375, height: groupHeight*0.75)
+        //cell width: 螢幕寬*142/375，142/375來自figma
+        //cell height: cell width*(245/142)，245和142來自figma
+        let cellWidth = self.view.frame.width*142/375
+        let cellHeight = cellWidth*1.725
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }

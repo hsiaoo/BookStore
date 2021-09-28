@@ -28,7 +28,7 @@ struct Book
     var pages: Int
     var description: String
     
-    static var BookSample: [Book] {
+    static var sampleBooks: [Book] {
         let books = [
             Book(title: "年輕人為何憤怒", author: "賈米爾．吉瓦尼", image: nil, publicationDate: "2021/09/14", fileType: .PDF, pages: 328, description: "在當今的世界，年輕人面臨的陷阱和誘惑比以往任何時候都要多，但能讓身陷溝渠的他們爬出困境的梯子卻比以往都更少。那些急切地想用暴力摧毀世界的年輕人，他們為何憤怒？為何掙扎？本書最精彩的並不是浪子回頭的故事，而是深刻的同情性理解，撼動人心。"),
             Book(title: "神秘優雅的數學家日常", author: "二宮敦人", image: nil, publicationDate: "2021/09/17", fileType: .PDF, pages: 336, description: "喜歡數學的，都是什麼樣的人？時而聰穎、時而脫線、從走路的背影就可以知道誰是數學家，只有天選之人才能入住，彷彿現代霍格華茲的數學界。從天才們架構的宇宙，延伸出人類的未來！真誠無邪念、忠於自己的感情，這就是數學的世界。"),

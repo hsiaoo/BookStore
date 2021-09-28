@@ -13,7 +13,7 @@ class LibraryBooksViewController: UIViewController
     
     let category: LibraryCategory // 圖書主分類
     let subCategory: LibrarySubCategory // 圖書次分類
-    var books = [Book]() //TODO: 應要根據圖書主次分類抓取書籍陣列，目前先用BookSample
+    var books = [Book]() //TODO: 應要根據圖書主次分類抓取書籍陣列，目前先用sampleBooks
     
     init?(category: LibraryCategory, subCategory: LibrarySubCategory, coder: NSCoder)
     {
@@ -35,7 +35,7 @@ class LibraryBooksViewController: UIViewController
         
         if books.isEmpty
         {
-            books = Book.BookSample
+            books = Book.sampleBooks
         }
         
         let bookNib = UINib(nibName: String(describing: BookCollectionViewCell.self), bundle: nil)
