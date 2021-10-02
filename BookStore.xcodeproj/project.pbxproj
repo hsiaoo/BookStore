@@ -28,6 +28,7 @@
 		85AA7EC826F880F300558298 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7EC726F880F300558298 /* Book.swift */; };
 		85AA7ECC26F8845400558298 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7ECA26F8845300558298 /* BookCollectionViewCell.swift */; };
 		85AA7ECD26F8845400558298 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85AA7ECB26F8845400558298 /* BookCollectionViewCell.xib */; };
+		85EDA3A32707FD4D004894DC /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDA3A22707FD4D004894DC /* PreferenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		85AA7EC726F880F300558298 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		85AA7ECA26F8845300558298 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		85AA7ECB26F8845400558298 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		85EDA3A22707FD4D004894DC /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */,
 				8568C9D626FA217100752453 /* LibraryBooksViewController.swift */,
 				8539D92527034D9D00EA39FD /* ShelfViewController.swift */,
+				85EDA3A22707FD4D004894DC /* PreferenceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85EDA3A32707FD4D004894DC /* PreferenceViewController.swift in Sources */,
 				85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */,
 				8539D92627034D9D00EA39FD /* ShelfViewController.swift in Sources */,
 				8568C9D226F9CFFE00752453 /* LibrarySubCategoryViewController.swift in Sources */,
