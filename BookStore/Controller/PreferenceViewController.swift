@@ -18,6 +18,7 @@ class PreferenceViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        setVersionLabel()
     }
     
     @IBAction func logout(_ sender: UIButton)
@@ -51,6 +52,13 @@ class PreferenceViewController: UIViewController
             print("刪除所有書籍")
         default: break
         }
+    }
+    
+    private func setVersionLabel()
+    {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1"
+        let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
+        versionLabel.text = "版本：\(version)_\(buildNumber)"
     }
     
 }

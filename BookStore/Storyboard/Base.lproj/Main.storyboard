@@ -348,7 +348,7 @@
             </objects>
             <point key="canvasLocation" x="1318.840579710145" y="1417.6339285714284"/>
         </scene>
-        <!--Preference View Controller-->
+        <!--設定-->
         <scene sceneID="pyu-gb-O55">
             <objects>
                 <viewController id="P0k-1t-6sc" customClass="PreferenceViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,11 +356,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="z8i-7H-BWd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="595"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="z8i-7H-BWd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="579"/>
                                 <color key="backgroundColor" name="LightGrayBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FileManagementCell" id="sPD-j3-7ah">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FileManagementCell" id="sPD-j3-7ah">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sPD-j3-7ah" id="mXC-5I-nnZ">
@@ -376,8 +376,8 @@
                                     <outlet property="delegate" destination="P0k-1t-6sc" id="IRO-lf-OcD"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-99-MpM">
-                                <rect key="frame" x="59" y="703" width="123" height="90"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-99-MpM">
+                                <rect key="frame" x="59" y="687" width="304.5" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVB-R2-ZD2">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="36"/>
@@ -390,11 +390,12 @@
                                             <action selector="logout:" destination="P0k-1t-6sc" eventType="touchUpInside" id="8Qp-9P-c03"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dNO-1C-lI6">
-                                        <rect key="frame" x="0.0" y="40" width="123" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dNO-1C-lI6">
+                                        <rect key="frame" x="0.0" y="38" width="304.5" height="68"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-Mw-iHJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="台灣雲端書庫官網">
                                                     <color key="titleColor" systemColor="labelColor"/>
@@ -403,9 +404,15 @@
                                                     <action selector="openOfficialWebsite:" destination="P0k-1t-6sc" eventType="touchUpInside" id="SRd-ZS-rcG"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本：1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jM-Oa-Pfl">
-                                                <rect key="frame" x="0.0" y="32" width="63" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本：x.x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jM-Oa-Pfl">
+                                                <rect key="frame" x="0.0" y="29" width="57.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2021 VSpace, Inc. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hE-8J-gcO">
+                                                <rect key="frame" x="0.0" y="52" width="304.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -413,7 +420,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7yM-v3-84k">
-                                <rect key="frame" x="30" y="710" width="23" height="22"/>
+                                <rect key="frame" x="30" y="694" width="23" height="22"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7yM-v3-84k" secondAttribute="height" multiplier="1:1" id="2tG-zF-1D4"/>
@@ -435,7 +442,7 @@
                             <constraint firstItem="7yM-v3-84k" firstAttribute="centerY" secondItem="pVB-R2-ZD2" secondAttribute="centerY" id="zjJ-ly-edT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uWr-TB-nsm"/>
+                    <navigationItem key="navigationItem" title="設定" id="uWr-TB-nsm"/>
                     <connections>
                         <outlet property="tableView" destination="z8i-7H-BWd" id="BrV-bL-QCe"/>
                         <outlet property="versionLabel" destination="6jM-Oa-Pfl" id="FeN-2D-oGE"/>
