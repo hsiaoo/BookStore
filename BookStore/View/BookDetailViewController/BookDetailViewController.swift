@@ -65,7 +65,8 @@ class BookDetailViewController: UIViewController
         // 生成attributedString並回傳
         let attributedText = NSAttributedString(string: text, attributes:
                                                     [NSAttributedString.Key.paragraphStyle : paragraph,
-                                                     NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14.0)])
+                                                     NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14.0),
+                                                     NSAttributedString.Key.foregroundColor: UIColor.label])
         return attributedText
     }
 }

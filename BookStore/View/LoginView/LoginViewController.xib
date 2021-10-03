@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -37,13 +37,13 @@
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請選擇書庫" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dr7-5d-igD">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
-                            <color key="backgroundColor" name="LightGrayBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電子信箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKB-TV-kdy">
                             <rect key="frame" x="0.0" y="65" width="314" height="44.5"/>
-                            <color key="backgroundColor" name="LightGrayBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             <connections>
@@ -52,7 +52,7 @@
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLG-nz-Uc8">
                             <rect key="frame" x="0.0" y="129.5" width="314" height="45"/>
-                            <color key="backgroundColor" name="LightGrayBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -70,15 +70,15 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDC-SI-e8G">
                             <rect key="frame" x="0.0" y="0.0" width="95.5" height="10"/>
-                            <color key="backgroundColor" name="LightOrange60"/>
+                            <color key="backgroundColor" name="secondaryOrange"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Weu-Qc-KDR">
                             <rect key="frame" x="103.5" y="0.0" width="95" height="10"/>
-                            <color key="backgroundColor" name="BrownGray60"/>
+                            <color key="backgroundColor" name="secondaryBrownGray"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5S-j0-KI7">
                             <rect key="frame" x="206.5" y="0.0" width="95.5" height="10"/>
-                            <color key="backgroundColor" name="BlueGreen60"/>
+                            <color key="backgroundColor" name="secondaryBlueGreen"/>
                         </view>
                     </subviews>
                     <constraints>
@@ -139,7 +139,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfi-Nm-ODs">
                     <rect key="frame" x="274" y="650.5" width="90" height="60"/>
-                    <color key="backgroundColor" name="DarkGrayButtonColor100"/>
+                    <color key="backgroundColor" name="primaryButton"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Zfi-Nm-ODs" secondAttribute="height" multiplier="3:2" id="zvo-Zz-9u1"/>
                     </constraints>
@@ -159,7 +159,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="normalView"/>
             <constraints>
                 <constraint firstItem="Zfi-Nm-ODs" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.217391" id="18Z-tr-5CA"/>
                 <constraint firstItem="91U-BX-HKD" firstAttribute="trailing" secondItem="bUc-97-xsv" secondAttribute="trailing" id="4gI-BU-B6a"/>
@@ -191,25 +191,25 @@
     <resources>
         <image name="CircleBackground" width="375" height="382"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <namedColor name="BlueGreen60">
-            <color red="0.43900001049041748" green="0.79199999570846558" blue="0.90600001811981201" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="normalView">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="BrownGray60">
-            <color red="0.60799998044967651" green="0.54100000858306885" blue="0.54100000858306885" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="DarkGrayButtonColor100">
+        <namedColor name="primaryButton">
             <color red="0.37299999594688416" green="0.33300000429153442" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="LightGrayBackgroundColor">
-            <color red="0.94499999284744263" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="secondaryBlueGreen">
+            <color red="0.49019607843137253" green="0.80784313725490198" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="LightOrange60">
-            <color red="1" green="0.69800001382827759" blue="0.41999998688697815" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="secondaryBrownGray">
+            <color red="0.67450980392156867" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryOrange">
+            <color red="1" green="0.74901960784313726" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
