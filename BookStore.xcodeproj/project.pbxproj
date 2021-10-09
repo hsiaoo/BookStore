@@ -18,6 +18,8 @@
 		8568C9D726FA217100752453 /* LibraryBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9D626FA217100752453 /* LibraryBooksViewController.swift */; };
 		8568C9DB26FAE1E000752453 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9D926FAE1E000752453 /* BookDetailViewController.swift */; };
 		8568C9DC26FAE1E000752453 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */; };
+		85740A6127119D330007B156 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85740A6027119D330007B156 /* DeviceManager.swift */; };
+		85740A632711D8640007B156 /* PreferenceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85740A622711D8640007B156 /* PreferenceSetting.swift */; };
 		85AA7EA826F869D300558298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7EA726F869D300558298 /* AppDelegate.swift */; };
 		85AA7EAA26F869D300558298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA7EA926F869D300558298 /* SceneDelegate.swift */; };
 		85AA7EAF26F869D300558298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AA7EAD26F869D300558298 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		8568C9D626FA217100752453 /* LibraryBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBooksViewController.swift; sourceTree = "<group>"; };
 		8568C9D926FAE1E000752453 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		85740A6027119D330007B156 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		85740A622711D8640007B156 /* PreferenceSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSetting.swift; sourceTree = "<group>"; };
 		85AA7EA426F869D300558298 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AA7EA726F869D300558298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AA7EA926F869D300558298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,12 +85,8 @@
 		8568C9CA26F8928400752453 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8568C9CB26F892B800752453 /* OverviewViewController.swift */,
-				8568C9CD26F983C200752453 /* LibraryViewController.swift */,
-				8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */,
-				8568C9D626FA217100752453 /* LibraryBooksViewController.swift */,
-				8539D92527034D9D00EA39FD /* ShelfViewController.swift */,
-				85EDA3A22707FD4D004894DC /* PreferenceViewController.swift */,
+				85740A5E27119CFF0007B156 /* ViewController */,
+				85740A6027119D330007B156 /* DeviceManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,6 +127,19 @@
 				8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */,
 			);
 			path = BookDetailViewController;
+			sourceTree = "<group>";
+		};
+		85740A5E27119CFF0007B156 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8568C9CB26F892B800752453 /* OverviewViewController.swift */,
+				8568C9CD26F983C200752453 /* LibraryViewController.swift */,
+				8568C9D126F9CFFD00752453 /* LibrarySubCategoryViewController.swift */,
+				8568C9D626FA217100752453 /* LibraryBooksViewController.swift */,
+				8539D92527034D9D00EA39FD /* ShelfViewController.swift */,
+				85EDA3A22707FD4D004894DC /* PreferenceViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		85AA7E9B26F869D300558298 = {
@@ -172,6 +185,7 @@
 				85AA7EC726F880F300558298 /* Book.swift */,
 				8568C9CF26F9888200752453 /* LibraryCategory.swift */,
 				85641A9527006BED00EF5D32 /* Libraries.swift */,
+				85740A622711D8640007B156 /* PreferenceSetting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85EDA3A32707FD4D004894DC /* PreferenceViewController.swift in Sources */,
+				85740A632711D8640007B156 /* PreferenceSetting.swift in Sources */,
 				85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */,
 				8539D92627034D9D00EA39FD /* ShelfViewController.swift in Sources */,
 				8568C9D226F9CFFE00752453 /* LibrarySubCategoryViewController.swift in Sources */,
@@ -271,6 +286,7 @@
 				85641A9627006BED00EF5D32 /* Libraries.swift in Sources */,
 				85AA7EA826F869D300558298 /* AppDelegate.swift in Sources */,
 				8568C9DB26FAE1E000752453 /* BookDetailViewController.swift in Sources */,
+				85740A6127119D330007B156 /* DeviceManager.swift in Sources */,
 				85AA7EC426F87A8400558298 /* HorizontalCollectionView.swift in Sources */,
 				8568C9D026F9888200752453 /* LibraryCategory.swift in Sources */,
 				85AA7ECC26F8845400558298 /* BookCollectionViewCell.swift in Sources */,
