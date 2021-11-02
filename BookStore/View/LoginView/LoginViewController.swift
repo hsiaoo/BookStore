@@ -25,7 +25,7 @@ class LoginViewController: UIViewController
         registerKeyboardNotification()
     }
     
-    @IBAction func tappedBackButton(_ sender: UIButton)
+    @IBAction func backToOverview()
     {
         // 返回上一頁，要顯示tab bar和navigation bar
         navigationController?.navigationBar.isHidden = false
@@ -35,6 +35,34 @@ class LoginViewController: UIViewController
     
     @IBAction func tappedLoginButton(_ sender: UIButton)
     {
+        UserManager.shared.checkLoginStatus { isLogin in
+            guard !isLogin else
+            {
+                // 使用者已登入
+                print("User has logged in.")
+                return
+            }
+            
+            let library = self.libraryTextField.text ?? ""
+            let em = self.emTextField.text ?? ""
+            let pw = self.pwTextField.text ?? ""
+            
+            guard !library.isEmpty && !em.isEmpty && !pw.isEmpty else
+            {
+                // 資料沒有填寫完全，不能登入
+                let alert = UIAlertController(title: "登入資料填寫不完全", message: "請輸入完整資料", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            // 生成一組UUID寫進UserInfo，完成登入
+            UserManager.shared.setUserInfo(key: .UID, value: UUID().uuidString)
+            
+            // 回到首頁
+            self.backToOverview()
+        }
     }
     
     @IBAction func tappedSignUpButton(_ sender: UIButton)

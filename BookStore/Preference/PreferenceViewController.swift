@@ -21,6 +21,16 @@ class PreferenceViewController: UIViewController
     
     @IBAction func logout(_ sender: UIButton)
     {
+        // 移除UID即登出
+        UserManager.shared.removeUserInfo(key: .UID)
+        
+        // 提示使用者已登出，按下OK後回到首頁
+        let alert = UIAlertController(title: "登出成功", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "確認", style: .default, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+            self.tabBarController?.selectedIndex = 0
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func openOfficialWebsite(_ sender: UIButton)

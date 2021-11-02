@@ -42,21 +42,28 @@ class OverviewViewController: UIViewController
     
     private func checkLoginStatus()
     {
-        // 判斷使用者是否登入
-        if (UserDefaults.standard.object(forKey: "em") as? String) != nil
-        {
-            // 使用者已登入
+        UserManager.shared.checkLoginStatus
+        { isLogin in
+            guard isLogin else
+            {
+                // 使用者未登入，建立右上角的登入按鈕
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+                    image: UIImage(systemName: "person"),
+                    style: .plain,
+                    target: self,
+                    action: #selector(self.login))
+                
+                return
+            }
+            
+            // 使用者已登入，不需要顯示右上角的登入按鈕
             self.navigationItem.rightBarButtonItem = nil
-        }
-        else
-        {
-            // 使用者未登入，建立右上角的登入按鈕
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: self, action: #selector(login))
         }
     }
     
     @objc func login()
     {
+        // 畫面導往登入頁面
         let loginViewController = LoginViewController()
         self.navigationController?.pushViewController(loginViewController, animated: true)
     }

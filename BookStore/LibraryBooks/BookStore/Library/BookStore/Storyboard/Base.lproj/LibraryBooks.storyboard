@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kB0-tJ-Xfp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Library Books View Controller-->
+        <scene sceneID="6Ly-2J-okm">
+            <objects>
+                <viewController id="kB0-tJ-Xfp" customClass="LibraryBooksViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZOk-io-tyn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="quH-Cj-ytz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="normalView"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kx7-IN-fMV">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kB0-tJ-Xfp" id="klw-qy-Yeu"/>
+                                    <outlet property="delegate" destination="kB0-tJ-Xfp" id="Mlj-UC-Kpa"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H6n-iO-mZT"/>
+                        <color key="backgroundColor" name="normalView"/>
+                        <constraints>
+                            <constraint firstItem="quH-Cj-ytz" firstAttribute="leading" secondItem="H6n-iO-mZT" secondAttribute="leading" id="7FU-z3-T2R"/>
+                            <constraint firstItem="quH-Cj-ytz" firstAttribute="top" secondItem="H6n-iO-mZT" secondAttribute="top" id="OaJ-QV-uY9"/>
+                            <constraint firstItem="quH-Cj-ytz" firstAttribute="bottom" secondItem="H6n-iO-mZT" secondAttribute="bottom" id="Qn8-BU-i2f"/>
+                            <constraint firstItem="quH-Cj-ytz" firstAttribute="trailing" secondItem="H6n-iO-mZT" secondAttribute="trailing" id="WvG-Rf-0JJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Csu-th-NnL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="quH-Cj-ytz" id="AUF-4V-4UR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRc-8Y-WZN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3056.521739130435" y="641.51785714285711"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
+    <resources>
+        <namedColor name="normalView">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

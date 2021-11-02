@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nbx-t6-0Dm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--圖書館-->
+        <scene sceneID="9rw-as-gbw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nbx-t6-0Dm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="圖書館" image="books.vertical" catalog="system" id="6nh-ze-yKA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vOw-Fc-xfS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JlK-FL-3Sn" kind="relationship" relationship="rootViewController" id="r06-n4-pnN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0i-d3-0kV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442.02898550724643" y="641.51785714285711"/>
+        </scene>
+        <!--Library View Controller-->
+        <scene sceneID="7Im-qI-Aaj">
+            <objects>
+                <viewController id="JlK-FL-3Sn" customClass="LibraryViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ozN-rB-FX8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4jl-1c-b4R">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="normalView"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCell" textLabel="P5S-CK-jWR" style="IBUITableViewCellStyleDefault" id="oIc-73-bLa">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oIc-73-bLa" id="2sU-jN-REf">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P5S-CK-jWR">
+                                                    <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="normalView"/>
+                                        <connections>
+                                            <segue destination="gWj-EK-R8E" kind="show" destinationCreationSelector="toSubCategory:sender:" id="ytm-gp-OHE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JlK-FL-3Sn" id="HZL-qE-f8s"/>
+                                    <outlet property="delegate" destination="JlK-FL-3Sn" id="UVB-18-Tpe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O8l-BS-99V"/>
+                        <color key="backgroundColor" name="normalView"/>
+                        <constraints>
+                            <constraint firstItem="4jl-1c-b4R" firstAttribute="top" secondItem="O8l-BS-99V" secondAttribute="top" id="gSD-Ks-6OW"/>
+                            <constraint firstItem="4jl-1c-b4R" firstAttribute="leading" secondItem="O8l-BS-99V" secondAttribute="leading" id="jXX-wK-fc8"/>
+                            <constraint firstItem="4jl-1c-b4R" firstAttribute="trailing" secondItem="O8l-BS-99V" secondAttribute="trailing" id="nKt-Wb-AT4"/>
+                            <constraint firstItem="4jl-1c-b4R" firstAttribute="bottom" secondItem="O8l-BS-99V" secondAttribute="bottom" id="ojT-Wf-7ES"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IGM-eI-MmD">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="圖書館" id="FqP-r2-pV0"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Vsz-dv-2si">
+                            <rect key="frame" x="79.5" y="6" width="255" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="電子書"/>
+                                <segment title="電子雜誌"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="4jl-1c-b4R" id="6Mu-El-MlD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aar-ru-yhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318.840579710145" y="641.51785714285711"/>
+        </scene>
+        <!--LibrarySubCategory-->
+        <scene sceneID="YMn-Fr-yfR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LibrarySubCategory" id="gWj-EK-R8E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QgI-Bb-LCu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xG-Zv-cF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2184" y="642"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
+    <resources>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <namedColor name="normalView">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DeviceInfo: String
+enum DeviceInfoKey: String
 {
     case AUTO_DOWNLOAD = "AUTO_DOWNLOAD"    // 自動下載借閱書籍
     case AUTO_DELETE = "AUTO_DELETE"    // 自動刪除已歸還書籍
@@ -21,12 +21,12 @@ class DeviceManager
     private let userDefault = UserDefaults.standard
     private let DEVICE_INFO = "DEVICE_INFO"
     
-    func setDeviceInfo(key: DeviceInfo, value: Any)
+    func setDeviceInfo(key: DeviceInfoKey, value: Any)
     {
         userDefault.set(value, forKey: key.rawValue)
     }
     
-    func boolFromDeviceInfo(key: DeviceInfo) -> Bool?
+    func boolFromDeviceInfo(key: DeviceInfoKey) -> Bool?
     {
         if let value = userDefault.value(forKey: key.rawValue) as? Bool
         {
