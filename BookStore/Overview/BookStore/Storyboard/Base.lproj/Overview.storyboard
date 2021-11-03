@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fQ3-dP-aa2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,30 +27,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc6-aI-H8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442.02898550724643" y="-97.098214285714278"/>
+            <point key="canvasLocation" x="278" y="-97"/>
         </scene>
         <!--台灣雲端書庫-->
         <scene sceneID="rx0-e8-TC0">
             <objects>
                 <viewController id="kqN-0V-dGd" customClass="OverviewViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="krM-XE-tjh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t7-Xt-X35">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-i8-yjQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-i8-yjQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5c-99-7Ke">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" id="pZC-04-aWn"/>
-                                                </constraints>
-                                            </view>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCz-QM-3Tv" userLabel="Information">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
+                                                <connections>
+                                                    <segue destination="eKz-Y2-fuM" kind="embed" id="zlN-ke-cwK"/>
+                                                </connections>
+                                            </containerView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aCz-QM-3Tv" secondAttribute="trailing" id="avX-zT-tut"/>
+                                            <constraint firstItem="aCz-QM-3Tv" firstAttribute="leading" secondItem="oXO-i8-yjQ" secondAttribute="leading" id="tpk-5y-gyT"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -69,16 +74,73 @@
                             <constraint firstItem="9t7-Xt-X35" firstAttribute="top" secondItem="XmT-rd-rVr" secondAttribute="top" id="VlW-E0-uv2"/>
                             <constraint firstItem="9t7-Xt-X35" firstAttribute="leading" secondItem="XmT-rd-rVr" secondAttribute="leading" id="ZYc-Hm-cL6"/>
                             <constraint firstItem="9t7-Xt-X35" firstAttribute="trailing" secondItem="XmT-rd-rVr" secondAttribute="trailing" id="ZkV-Dl-wcs"/>
+                            <constraint firstItem="aCz-QM-3Tv" firstAttribute="height" secondItem="krM-XE-tjh" secondAttribute="height" multiplier="372.6/896" id="sBW-Kk-tIw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="台灣雲端書庫" id="o6C-YJ-WP1"/>
                     <connections>
-                        <outlet property="stackView" destination="oXO-i8-yjQ" id="QWd-qW-pTI"/>
+                        <outlet property="informationContainerHeightConstraint" destination="sBW-Kk-tIw" id="Dbv-vS-yKR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jt-1l-kRs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318.840579710145" y="-97.098214285714278"/>
+        </scene>
+        <!--Information View Controller-->
+        <scene sceneID="Xmr-tn-0aQ">
+            <objects>
+                <viewController id="eKz-Y2-fuM" customClass="InformationViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ch-Ae-fsz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="372"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-vd-9Oi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MPh-w5-Sjw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSO-Ur-UxJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="wlW-4D-Qt8"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CSO-Ur-UxJ" firstAttribute="leading" secondItem="MPh-w5-Sjw" secondAttribute="leading" id="atT-6i-Dnd"/>
+                                            <constraint firstAttribute="trailing" secondItem="CSO-Ur-UxJ" secondAttribute="trailing" id="g29-qb-w7j"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MPh-w5-Sjw" firstAttribute="top" secondItem="Hjq-cD-sLz" secondAttribute="top" id="7Ep-UZ-gfq"/>
+                                    <constraint firstItem="MPh-w5-Sjw" firstAttribute="trailing" secondItem="Hjq-cD-sLz" secondAttribute="trailing" id="Fhm-aC-dki"/>
+                                    <constraint firstItem="MPh-w5-Sjw" firstAttribute="bottom" secondItem="Hjq-cD-sLz" secondAttribute="bottom" id="Hd5-Wj-6e0"/>
+                                    <constraint firstItem="MPh-w5-Sjw" firstAttribute="leading" secondItem="Hjq-cD-sLz" secondAttribute="leading" id="baj-19-Apc"/>
+                                    <constraint firstItem="MPh-w5-Sjw" firstAttribute="width" secondItem="2hd-vd-9Oi" secondAttribute="width" id="qPd-1J-1v6"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Hjq-cD-sLz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="DyK-Jl-GeU"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ChQ-OH-yb9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2hd-vd-9Oi" firstAttribute="top" secondItem="9Ch-Ae-fsz" secondAttribute="top" id="0uO-5v-eBb"/>
+                            <constraint firstItem="2hd-vd-9Oi" firstAttribute="trailing" secondItem="ChQ-OH-yb9" secondAttribute="trailing" id="AOh-xI-eNV"/>
+                            <constraint firstItem="2hd-vd-9Oi" firstAttribute="leading" secondItem="ChQ-OH-yb9" secondAttribute="leading" id="r8e-3G-krP"/>
+                            <constraint firstAttribute="bottom" secondItem="2hd-vd-9Oi" secondAttribute="bottom" id="zzw-o4-xks"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="MPh-w5-Sjw" id="h8F-8f-t35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDk-Jc-gR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368" y="-436"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="labelColor"/>

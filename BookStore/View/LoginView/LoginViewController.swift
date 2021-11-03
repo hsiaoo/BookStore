@@ -185,23 +185,23 @@ extension LoginViewController: UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        return Libraries.libraries.count
+        return Library.libraries.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        return Libraries.libraries[row]
+        return Library.libraries[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if row == 0
         {
-            libraryTextField.text = Libraries.libraries[row]
+            libraryTextField.text = Library.libraries[row]
         }
         else
         {
-            libraryTextField.text = "台灣雲端書庫@\(Libraries.libraries[row])"
+            libraryTextField.text = "台灣雲端書庫@\(Library.libraries[row])"
         }
     }
 }
