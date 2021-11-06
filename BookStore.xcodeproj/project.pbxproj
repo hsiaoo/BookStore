@@ -16,7 +16,6 @@
 		8561C16F27316DA90013A359 /* LibrarySubCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8561C16D27316DA90013A359 /* LibrarySubCategory.storyboard */; };
 		8561C1732731964D0013A359 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561C1722731964D0013A359 /* InformationViewController.swift */; };
 		85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */; };
-		85641A9226FF2A1A00EF5D32 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85641A9026FF2A1A00EF5D32 /* LoginViewController.xib */; };
 		85641A9627006BED00EF5D32 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85641A9527006BED00EF5D32 /* Library.swift */; };
 		8568C9CC26F892B800752453 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9CB26F892B800752453 /* OverviewViewController.swift */; };
 		8568C9CE26F983C200752453 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9CD26F983C200752453 /* LibraryViewController.swift */; };
@@ -25,6 +24,7 @@
 		8568C9D726FA217100752453 /* LibraryBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9D626FA217100752453 /* LibraryBooksViewController.swift */; };
 		8568C9DB26FAE1E000752453 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C9D926FAE1E000752453 /* BookDetailViewController.swift */; };
 		8568C9DC26FAE1E000752453 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */; };
+		8573D6BA2736693200964EEE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8573D6B92736693200964EEE /* Login.storyboard */; };
 		85740A6127119D330007B156 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85740A6027119D330007B156 /* DeviceManager.swift */; };
 		85740A632711D8640007B156 /* PreferenceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85740A622711D8640007B156 /* PreferenceSetting.swift */; };
 		858B01F82712A5EB00E3EC00 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B01F72712A5EB00E3EC00 /* UserManager.swift */; };
@@ -51,7 +51,6 @@
 		8561C16E27316DA90013A359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BookStore/Storyboard/Base.lproj/LibrarySubCategory.storyboard; sourceTree = "<group>"; };
 		8561C1722731964D0013A359 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		85641A9026FF2A1A00EF5D32 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		85641A9527006BED00EF5D32 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		8568C9CB26F892B800752453 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		8568C9CD26F983C200752453 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		8568C9D626FA217100752453 /* LibraryBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBooksViewController.swift; sourceTree = "<group>"; };
 		8568C9D926FAE1E000752453 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		8573D6B92736693200964EEE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		85740A6027119D330007B156 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		85740A622711D8640007B156 /* PreferenceSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSetting.swift; sourceTree = "<group>"; };
 		858B01F72712A5EB00E3EC00 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 				8561C15927316A5A0013A359 /* Overview.storyboard */,
 				8568C9CB26F892B800752453 /* OverviewViewController.swift */,
 				8561C1722731964D0013A359 /* InformationViewController.swift */,
-				85A7511F2732D5E50093E374 /* Unit View */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -145,15 +144,6 @@
 			path = LibraryBooks;
 			sourceTree = "<group>";
 		};
-		85641A8E26FF29F400EF5D32 /* LoginView */ = {
-			isa = PBXGroup;
-			children = (
-				85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */,
-				85641A9026FF2A1A00EF5D32 /* LoginViewController.xib */,
-			);
-			path = LoginView;
-			sourceTree = "<group>";
-		};
 		8568C9CA26F8928400752453 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +182,15 @@
 			path = BookDetailViewController;
 			sourceTree = "<group>";
 		};
+		8573D6B82736691000964EEE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8573D6B92736693200964EEE /* Login.storyboard */,
+				85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		85A7511F2732D5E50093E374 /* Unit View */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,9 +227,11 @@
 				8561C17027316DBE0013A359 /* LibrarySubCategory */,
 				8561C16527316B0E0013A359 /* BookShelf */,
 				8561C16927316D0C0013A359 /* Preference */,
+				8573D6B82736691000964EEE /* Login */,
 				8568C9D426F9E1B400752453 /* Storyboard */,
 				8568C9D326F9E19300752453 /* Resource */,
 				85AA7EC626F880E300558298 /* Model */,
+				85A7511F2732D5E50093E374 /* Unit View */,
 				85AA7EC926F8842F00558298 /* View */,
 				8568C9CA26F8928400752453 /* Controller */,
 			);
@@ -251,7 +252,6 @@
 		85AA7EC926F8842F00558298 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85641A8E26FF29F400EF5D32 /* LoginView */,
 				8568C9D826FAE0C100752453 /* BookDetailViewController */,
 			);
 			path = View;
@@ -317,6 +317,7 @@
 			files = (
 				85AA7EB426F869D900558298 /* LaunchScreen.storyboard in Resources */,
 				8561C15B27316A5A0013A359 /* Overview.storyboard in Resources */,
+				8573D6BA2736693200964EEE /* Login.storyboard in Resources */,
 				8561C16127316ADB0013A359 /* Library.storyboard in Resources */,
 				85AA7EB126F869D900558298 /* Assets.xcassets in Resources */,
 				8568C9DC26FAE1E000752453 /* BookDetailViewController.xib in Resources */,
@@ -325,7 +326,6 @@
 				85AA7EC526F87A8400558298 /* HorizontalCollectionView.xib in Resources */,
 				85AA7EAF26F869D300558298 /* Main.storyboard in Resources */,
 				8561C16C27316D620013A359 /* LibraryBooks.storyboard in Resources */,
-				85641A9226FF2A1A00EF5D32 /* LoginViewController.xib in Resources */,
 				85AA7ECD26F8845400558298 /* BookCollectionViewCell.xib in Resources */,
 				8561C16F27316DA90013A359 /* LibrarySubCategory.storyboard in Resources */,
 			);

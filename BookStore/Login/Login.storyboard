@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CDx-Qk-OpA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台灣雲端書庫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsd-m6-l4k">
+                                <rect key="frame" x="68.5" y="196.5" width="277.5" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npF-eg-biA">
+                                <rect key="frame" x="16" y="52" width="26.5" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="npF-eg-biA" secondAttribute="height" multiplier="1:1" id="LFf-P7-O5q"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backToPreviousView" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rQm-1F-oOR"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RMK-eI-nIH">
+                                <rect key="frame" x="50" y="448" width="314" height="174.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請選擇書庫" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4o5-CD-rgD">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電子信箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-LT-E3J">
+                                        <rect key="frame" x="0.0" y="65" width="314" height="44.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="W6d-tW-Wjf"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-16-1Ve">
+                                        <rect key="frame" x="0.0" y="129.5" width="314" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="7OA-XH-pAe"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zVr-16-1Ve" firstAttribute="height" secondItem="4o5-CD-rgD" secondAttribute="height" id="Tly-da-4FZ"/>
+                                    <constraint firstItem="Jbm-LT-E3J" firstAttribute="height" secondItem="4o5-CD-rgD" secondAttribute="height" id="zlt-tZ-pK8"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkE-Lq-0Ln">
+                                <rect key="frame" x="274" y="650.5" width="90" height="60"/>
+                                <color key="backgroundColor" name="primaryButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tkE-Lq-0Ln" secondAttribute="height" multiplier="3:2" id="YU9-iy-se8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="登入">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedLoginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NRa-Bf-f4e"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qxD-eW-d5m">
+                                <rect key="frame" x="56" y="771.5" width="302" height="10"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsO-x2-ULj">
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="10"/>
+                                        <color key="backgroundColor" name="secondaryOrange"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-LT-BB9">
+                                        <rect key="frame" x="103.5" y="0.0" width="95" height="10"/>
+                                        <color key="backgroundColor" name="tertiaryBrownGray"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-ia-Tnm">
+                                        <rect key="frame" x="206.5" y="0.0" width="95.5" height="10"/>
+                                        <color key="backgroundColor" name="tertiaryBlueGreen"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Fvt-o9-kDA"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W6b-ie-NNA">
+                                <rect key="frame" x="50" y="752.5" width="314" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwB-0f-TrG">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="申請帳號">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedSignUpButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BEG-YD-ipk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkR-IU-d3F">
+                                        <rect key="frame" x="104.5" y="0.0" width="105" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="忘記密碼">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedForgetPwButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fpb-Jj-HkE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPN-aW-blQ">
+                                        <rect key="frame" x="209.5" y="0.0" width="104.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="更多說明">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedLearnMoreButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SVB-0L-30Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="npF-eg-biA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="1hG-op-8tD"/>
+                            <constraint firstItem="CDx-Qk-OpA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1ra-fY-T3k"/>
+                            <constraint firstItem="CDx-Qk-OpA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="3kD-t5-F19"/>
+                            <constraint firstItem="W6b-ie-NNA" firstAttribute="top" secondItem="tkE-Lq-0Ln" secondAttribute="bottom" constant="42" id="3wa-ha-PJy"/>
+                            <constraint firstItem="qxD-eW-d5m" firstAttribute="leading" secondItem="W6b-ie-NNA" secondAttribute="leading" constant="6" id="53w-8Z-SON"/>
+                            <constraint firstItem="Zsd-m6-l4k" firstAttribute="centerY" secondItem="CDx-Qk-OpA" secondAttribute="centerY" id="5uf-ss-RVB"/>
+                            <constraint firstItem="tkE-Lq-0Ln" firstAttribute="trailing" secondItem="RMK-eI-nIH" secondAttribute="trailing" id="84t-g4-xdR"/>
+                            <constraint firstItem="RMK-eI-nIH" firstAttribute="top" secondItem="CDx-Qk-OpA" secondAttribute="bottom" id="87c-MS-Yzv"/>
+                            <constraint firstItem="CDx-Qk-OpA" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="AQH-zj-vJk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RMK-eI-nIH" secondAttribute="trailing" constant="50" id="CHo-fg-hLA"/>
+                            <constraint firstItem="qxD-eW-d5m" firstAttribute="trailing" secondItem="W6b-ie-NNA" secondAttribute="trailing" constant="-6" id="EMK-5C-oEx"/>
+                            <constraint firstItem="4o5-CD-rgD" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.05" id="FJ7-VU-Ymy"/>
+                            <constraint firstItem="npF-eg-biA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="IVb-OP-uq8"/>
+                            <constraint firstItem="RMK-eI-nIH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="LzA-dq-w3D"/>
+                            <constraint firstItem="qxD-eW-d5m" firstAttribute="bottom" secondItem="W6b-ie-NNA" secondAttribute="bottom" constant="-5" id="PQ7-EM-7Cf"/>
+                            <constraint firstItem="tkE-Lq-0Ln" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.217391" id="iY2-Sp-UtQ"/>
+                            <constraint firstItem="tkE-Lq-0Ln" firstAttribute="top" secondItem="RMK-eI-nIH" secondAttribute="bottom" constant="28" id="mma-w0-M6g"/>
+                            <constraint firstItem="npF-eg-biA" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="24/375" id="oAj-3S-fYk"/>
+                            <constraint firstItem="CDx-Qk-OpA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qFT-4Z-a42"/>
+                            <constraint firstItem="W6b-ie-NNA" firstAttribute="leading" secondItem="RMK-eI-nIH" secondAttribute="leading" id="s6F-ge-cYb"/>
+                            <constraint firstItem="W6b-ie-NNA" firstAttribute="trailing" secondItem="RMK-eI-nIH" secondAttribute="trailing" id="vQd-jo-4dp"/>
+                            <constraint firstItem="Zsd-m6-l4k" firstAttribute="centerX" secondItem="CDx-Qk-OpA" secondAttribute="centerX" id="zr1-Ep-5wf"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oB8-2p-5zB" appends="YES" id="vBV-fi-pdZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="emTextField" destination="Jbm-LT-E3J" id="HNC-EJ-yPC"/>
+                        <outlet property="libraryTextField" destination="4o5-CD-rgD" id="VLj-i5-U1Q"/>
+                        <outlet property="pwTextField" destination="zVr-16-1Ve" id="L8s-PA-V9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oB8-2p-5zB">
+                    <connections>
+                        <action selector="tapGestureOnView:" destination="Y6W-OH-hqX" id="ocj-o5-Bzo"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CircleBackground" width="375" height="382"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="primaryButton">
+            <color red="0.37299999594688416" green="0.33300000429153442" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryOrange">
+            <color red="1" green="0.74900001287460327" blue="0.51800000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tertiaryBlueGreen">
+            <color red="0.62400001287460327" green="0.87800002098083496" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tertiaryBrownGray">
+            <color red="0.76099997758865356" green="0.70200002193450928" blue="0.70200002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

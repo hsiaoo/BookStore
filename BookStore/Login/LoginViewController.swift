@@ -17,32 +17,38 @@ class LoginViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
         
         textFieldConfigure()
-        
         registerKeyboardNotification()
     }
     
-    @IBAction func backToOverview()
+    @IBAction func backToPreviousView()
     {
         // 返回上一頁，要顯示tab bar和navigation bar
         navigationController?.navigationBar.isHidden = false
         tabBarController?.tabBar.isHidden = false
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tapGestureOnView(_ sender: UITapGestureRecognizer)
+    {
+        // 收起鍵盤
+        libraryTextField.resignFirstResponder()
+        emTextField.resignFirstResponder()
+        pwTextField.resignFirstResponder()
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton)
     {
-        UserManager.shared.checkLoginStatus { isLogin in
-            guard !isLogin else
-            {
-                // 使用者已登入
-                print("User has logged in.")
-                return
-            }
-            
+        if UserManager.shared.isLogin
+        {
+            // 已登入
+            return
+        }
+        else
+        {
             let library = self.libraryTextField.text ?? ""
             let em = self.emTextField.text ?? ""
             let pw = self.pwTextField.text ?? ""
@@ -50,18 +56,18 @@ class LoginViewController: UIViewController
             guard !library.isEmpty && !em.isEmpty && !pw.isEmpty else
             {
                 // 資料沒有填寫完全，不能登入
-                let alert = UIAlertController(title: "登入資料填寫不完全", message: "請輸入完整資料", preferredStyle: .alert)
+                let alert = UIAlertController(title: "資料填寫不完全", message: "請輸入完整資料", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
                 alert.addAction(okAction)
                 self.present(alert, animated: true, completion: nil)
                 return
             }
             
-            // 生成一組UUID寫進UserInfo，完成登入
-            UserManager.shared.setUserInfo(key: .UID, value: UUID().uuidString)
+            // 登入
+            UserManager.shared.login(em: em)
             
-            // 回到首頁
-            self.backToOverview()
+            // 回前一頁
+            self.backToPreviousView()
         }
     }
     
@@ -114,14 +120,6 @@ class LoginViewController: UIViewController
     
     func textFieldConfigure()
     {
-        // text edge inset
-        libraryTextField.leftView = UIView(frame: (CGRect(x: 0, y: 0, width: 6, height: libraryTextField.frame.size.height)))
-        emTextField.leftView = UIView(frame: (CGRect(x: 0, y: 0, width: 6, height: emTextField.frame.size.height)))
-        pwTextField.leftView = UIView(frame: (CGRect(x: 0, y: 0, width: 6, height: pwTextField.frame.size.height)))
-        libraryTextField.leftViewMode = .always
-        emTextField.leftViewMode = .always
-        pwTextField.leftViewMode = .always
-        
         // textField cornerRadius
         libraryTextField.layer.cornerRadius = 10
         emTextField.layer.cornerRadius = 10
@@ -166,6 +164,7 @@ class LoginViewController: UIViewController
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate
 {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
@@ -176,6 +175,7 @@ extension LoginViewController: UITextFieldDelegate
     }
 }
 
+// MARK: - UIPickerViewDataSource, UIPickerViewDelegate
 extension LoginViewController: UIPickerViewDataSource, UIPickerViewDelegate
 {
     func numberOfComponents(in pickerView: UIPickerView) -> Int

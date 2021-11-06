@@ -77,21 +77,38 @@
                             <constraint firstItem="aCz-QM-3Tv" firstAttribute="height" secondItem="krM-XE-tjh" secondAttribute="height" multiplier="372.6/896" id="sBW-Kk-tIw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="台灣雲端書庫" id="o6C-YJ-WP1"/>
+                    <navigationItem key="navigationItem" title="台灣雲端書庫" id="o6C-YJ-WP1">
+                        <barButtonItem key="rightBarButtonItem" image="person" catalog="system" style="plain" id="wqe-C5-gsl">
+                            <connections>
+                                <segue destination="xgi-IX-hdX" kind="show" id="RWR-vS-LQ8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="informationContainerHeightConstraint" destination="sBW-Kk-tIw" id="Dbv-vS-yKR"/>
+                        <outlet property="loginButton" destination="wqe-C5-gsl" id="u3r-YP-NrD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jt-1l-kRs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318.840579710145" y="-97.098214285714278"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="rRK-mx-IOP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="xgi-IX-hdX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F8I-Fp-kMO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apm-Rj-1H2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501" y="-542"/>
+        </scene>
         <!--Information View Controller-->
         <scene sceneID="Xmr-tn-0aQ">
             <objects>
                 <viewController id="eKz-Y2-fuM" customClass="InformationViewController" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ch-Ae-fsz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="372"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-vd-9Oi">
@@ -146,6 +163,7 @@
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="normalView">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

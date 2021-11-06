@@ -9,6 +9,8 @@ import UIKit
 
 class OverviewViewController: UIViewController
 {
+    @IBOutlet weak var loginButton: UIBarButtonItem!
+    
     // Containers height constraint
     @IBOutlet weak var informationContainerHeightConstraint: NSLayoutConstraint!
     
@@ -24,8 +26,11 @@ class OverviewViewController: UIViewController
         checkLoginStatus()
     }
     
-    // MARK: - Private method
-    
+}
+
+// MARK: - Private method
+extension OverviewViewController
+{
     // 設定所有Containers的高度
     private func setHeightConstraints()
     {
@@ -35,30 +40,17 @@ class OverviewViewController: UIViewController
     // 檢查登入裝態
     private func checkLoginStatus()
     {
-        UserManager.shared.checkLoginStatus
-        { isLogin in
-            guard isLogin else
-            {
-                // 使用者未登入，建立右上角的登入按鈕
-                self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-                    image: UIImage(systemName: "person"),
-                    style: .plain,
-                    target: self,
-                    action: #selector(self.login))
-                
-                return
-            }
-            
-            // 使用者已登入，不需要顯示右上角的登入按鈕
-            self.navigationItem.rightBarButtonItem = nil
+        if UserManager.shared.isLogin
+        {
+            // 已登入，隱藏右上角的登入按鈕
+            loginButton.image = nil
+            loginButton.isEnabled = false
+        }
+        else
+        {
+            // 未登入，顯示右上角的登入按鈕
+            loginButton.image = UIImage(systemName: "person")
+            loginButton.isEnabled = true
         }
     }
-    
-    @objc func login()
-    {
-        // 畫面導往登入頁面
-        let loginViewController = LoginViewController()
-        self.navigationController?.pushViewController(loginViewController, animated: true)
-    }
 }
-
