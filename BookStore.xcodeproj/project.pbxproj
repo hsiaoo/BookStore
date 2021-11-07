@@ -173,15 +173,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		8568C9D826FAE0C100752453 /* BookDetailViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8568C9D926FAE1E000752453 /* BookDetailViewController.swift */,
-				8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */,
-			);
-			path = BookDetailViewController;
-			sourceTree = "<group>";
-		};
 		8573D6B82736691000964EEE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,13 +182,38 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		85A7511F2732D5E50093E374 /* Unit View */ = {
+		857AD9F92737798B006BA232 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8568C9DA26FAE1E000752453 /* BookDetailViewController.xib */,
+				8568C9D926FAE1E000752453 /* BookDetailViewController.swift */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		857AD9FC2737CF6F006BA232 /* HorizontalCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				85AA7EC226F87A8400558298 /* HorizontalCollectionView.swift */,
 				85AA7EC326F87A8400558298 /* HorizontalCollectionView.xib */,
+			);
+			path = HorizontalCollectionView;
+			sourceTree = "<group>";
+		};
+		857AD9FD2737CF7C006BA232 /* BookCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				85AA7ECA26F8845300558298 /* BookCollectionViewCell.swift */,
 				85AA7ECB26F8845400558298 /* BookCollectionViewCell.xib */,
+			);
+			path = BookCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		85A7511F2732D5E50093E374 /* Unit View */ = {
+			isa = PBXGroup;
+			children = (
+				857AD9FC2737CF6F006BA232 /* HorizontalCollectionView */,
+				857AD9FD2737CF7C006BA232 /* BookCollectionViewCell */,
 			);
 			path = "Unit View";
 			sourceTree = "<group>";
@@ -222,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				8561C16227316AEC0013A359 /* Overview */,
+				857AD9F92737798B006BA232 /* BookDetail */,
 				8561C16427316AFE0013A359 /* Library */,
 				8561C17127316DC60013A359 /* LibraryBooks */,
 				8561C17027316DBE0013A359 /* LibrarySubCategory */,
@@ -232,7 +249,6 @@
 				8568C9D326F9E19300752453 /* Resource */,
 				85AA7EC626F880E300558298 /* Model */,
 				85A7511F2732D5E50093E374 /* Unit View */,
-				85AA7EC926F8842F00558298 /* View */,
 				8568C9CA26F8928400752453 /* Controller */,
 			);
 			path = BookStore;
@@ -247,14 +263,6 @@
 				85740A622711D8640007B156 /* PreferenceSetting.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		85AA7EC926F8842F00558298 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8568C9D826FAE0C100752453 /* BookDetailViewController */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

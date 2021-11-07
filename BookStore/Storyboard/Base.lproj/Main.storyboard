@@ -37,7 +37,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgd-dG-3ov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="-123"/>
+            <point key="canvasLocation" x="425" y="556"/>
         </scene>
         <!--BookShelf-->
         <scene sceneID="but-7J-IGY">
@@ -47,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHY-3B-wG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409" y="1418"/>
+            <point key="canvasLocation" x="429" y="717"/>
         </scene>
         <!--Library-->
         <scene sceneID="xw9-03-OzN">
@@ -57,7 +57,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ts8-NM-KvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442.02898550724643" y="641.51785714285711"/>
+            <point key="canvasLocation" x="416" y="642"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="labelColor"/>
