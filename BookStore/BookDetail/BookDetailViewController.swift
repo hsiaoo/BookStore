@@ -110,9 +110,7 @@ extension BookDetailViewController
                 self.navigationController?.pushViewController(loginVC, animated: true)
             }
             
-            let cancel = UIAlertAction(title: "取消", style: .cancel) { _ in
-                self.tabBarController?.selectedIndex = 0
-            }
+            let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
             
             alert.addAction(login)
             alert.addAction(cancel)

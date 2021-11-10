@@ -39,4 +39,15 @@ extension BookCollectionViewCell
         let cellHeight = cellWidth * 245/142  // cell width*245/142，245/142來自figma
         return CGSize(width: cellWidth, height: cellHeight)
     }()
+    
+    static var libraryBooksItemSize: CGSize =
+    {
+        // cell width: (螢幕寬 - cell與鄰居的邊界距離25*3個距離) / 一列有2個cell，即可得到一個cell的寬
+        // cell height: cell width*(Figma cell長192+17+36)/(Figma cell寬142)
+        
+        let cellSpacing: CGFloat = 25
+        let cellWidth: CGFloat = (UIScreen.main.bounds.width - cellSpacing * 3) / 2
+        let cellHeight = cellWidth*(192+17+36)/142
+        return CGSize(width: cellWidth, height: cellHeight)
+    }()
 }
