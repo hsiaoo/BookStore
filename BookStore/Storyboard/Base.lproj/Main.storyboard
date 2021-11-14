@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="6j1-Py-fJr" kind="relationship" relationship="viewControllers" id="jHi-Hn-9t0"/>
                         <segue destination="09r-0W-qzr" kind="relationship" relationship="viewControllers" id="h9k-dT-2PR"/>
+                        <segue destination="lQc-G4-NzX" kind="relationship" relationship="viewControllers" id="nBg-ze-j8s"/>
                         <segue destination="RML-sl-3Bt" kind="relationship" relationship="viewControllers" id="Cu3-nb-ab8"/>
                     </connections>
                 </tabBarController>
@@ -47,7 +48,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHY-3B-wG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="717"/>
+            <point key="canvasLocation" x="428" y="822"/>
         </scene>
         <!--Library-->
         <scene sceneID="xw9-03-OzN">
@@ -57,7 +58,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ts8-NM-KvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416" y="642"/>
+            <point key="canvasLocation" x="414" y="642"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="HuI-Uk-joy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="lQc-G4-NzX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="i2e-UV-Wzh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IqO-Yk-0e9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="733"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="labelColor"/>
