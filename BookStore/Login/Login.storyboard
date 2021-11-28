@@ -44,11 +44,13 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請選擇書庫" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4o5-CD-rgD">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
+                                        <color key="backgroundColor" name="normalView"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="電子信箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-LT-E3J">
                                         <rect key="frame" x="0.0" y="65" width="314" height="44.5"/>
+                                        <color key="backgroundColor" name="normalView"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         <connections>
@@ -57,6 +59,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-16-1Ve">
                                         <rect key="frame" x="0.0" y="129.5" width="314" height="45"/>
+                                        <color key="backgroundColor" name="normalView"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
@@ -70,22 +73,27 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkE-Lq-0Ln">
-                                <rect key="frame" x="274" y="650.5" width="90" height="60"/>
+                                <rect key="frame" x="264.5" y="650.5" width="99.5" height="56.5"/>
                                 <color key="backgroundColor" name="primaryButton"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="tkE-Lq-0Ln" secondAttribute="height" multiplier="3:2" id="YU9-iy-se8"/>
+                                    <constraint firstAttribute="width" secondItem="tkE-Lq-0Ln" secondAttribute="height" multiplier="3.5:2" id="YU9-iy-se8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="登入">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedLoginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NRa-Bf-f4e"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qxD-eW-d5m">
-                                <rect key="frame" x="56" y="771.5" width="302" height="10"/>
+                                <rect key="frame" x="56" y="768" width="302" height="10"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsO-x2-ULj">
                                         <rect key="frame" x="0.0" y="0.0" width="95.5" height="10"/>
@@ -105,7 +113,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W6b-ie-NNA">
-                                <rect key="frame" x="50" y="752.5" width="314" height="34"/>
+                                <rect key="frame" x="50" y="749" width="314" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwB-0f-TrG">
                                         <rect key="frame" x="0.0" y="0.0" width="104.5" height="34"/>
@@ -144,7 +152,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="normalView"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="npF-eg-biA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="1hG-op-8tD"/>
@@ -162,7 +170,7 @@
                             <constraint firstItem="npF-eg-biA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="IVb-OP-uq8"/>
                             <constraint firstItem="RMK-eI-nIH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="LzA-dq-w3D"/>
                             <constraint firstItem="qxD-eW-d5m" firstAttribute="bottom" secondItem="W6b-ie-NNA" secondAttribute="bottom" constant="-5" id="PQ7-EM-7Cf"/>
-                            <constraint firstItem="tkE-Lq-0Ln" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.217391" id="iY2-Sp-UtQ"/>
+                            <constraint firstItem="tkE-Lq-0Ln" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.24" id="iY2-Sp-UtQ"/>
                             <constraint firstItem="tkE-Lq-0Ln" firstAttribute="top" secondItem="RMK-eI-nIH" secondAttribute="bottom" constant="28" id="mma-w0-M6g"/>
                             <constraint firstItem="npF-eg-biA" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="24/375" id="oAj-3S-fYk"/>
                             <constraint firstItem="CDx-Qk-OpA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qFT-4Z-a42"/>
@@ -193,6 +201,9 @@
     <resources>
         <image name="CircleBackground" width="375" height="382"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="normalView">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primaryButton">
             <color red="0.37299999594688416" green="0.33300000429153442" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -207,9 +218,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

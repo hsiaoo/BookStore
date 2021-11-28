@@ -44,10 +44,8 @@ class BookDetailViewController: UIViewController
     // MARK: - IBAction
     @IBAction func backButton(_ sender: UIButton)
     {
-        // 要回到上一頁了，顯示navigation bar及tab bar
-        navigationController?.navigationBar.isHidden = false
-        tabBarController?.tabBar.isHidden = false
-        self.navigationController?.popViewController(animated: true)
+        // 回到上一頁了
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tapPreRead(_ sender: UIButton)

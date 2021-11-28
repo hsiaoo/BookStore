@@ -26,9 +26,7 @@ class LoginViewController: UIViewController
     
     @IBAction func backToPreviousView()
     {
-        // 返回上一頁，要顯示tab bar和navigation bar
-        navigationController?.navigationBar.isHidden = false
-        tabBarController?.tabBar.isHidden = false
+        // 返回上一頁
         navigationController?.popViewController(animated: true)
     }
     
