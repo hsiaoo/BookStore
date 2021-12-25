@@ -18,6 +18,10 @@
 		8561C16C27316D620013A359 /* LibraryBooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8561C16A27316D620013A359 /* LibraryBooks.storyboard */; };
 		8561C16F27316DA90013A359 /* LibrarySubCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8561C16D27316DA90013A359 /* LibrarySubCategory.storyboard */; };
 		8561C1732731964D0013A359 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561C1722731964D0013A359 /* InformationViewController.swift */; };
+		8561F203275C9ABB005E59A8 /* ReaderControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561F202275C9ABA005E59A8 /* ReaderControlView.swift */; };
+		8561F205275C9ACB005E59A8 /* ReaderControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8561F204275C9ACB005E59A8 /* ReaderControlView.xib */; };
+		8561F2082765B405005E59A8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561F2072765B404005E59A8 /* UIColor+Extension.swift */; };
+		8561F22A2766301D005E59A8 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561F2292766301C005E59A8 /* UIFont+Extension.swift */; };
 		85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */; };
 		85641A9627006BED00EF5D32 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85641A9527006BED00EF5D32 /* Library.swift */; };
 		8564E3B5274E7E800039A20A /* TxtReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564E3B4274E7E800039A20A /* TxtReaderViewController.swift */; };
@@ -65,6 +69,10 @@
 		8561C16B27316D620013A359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BookStore/Library/BookStore/Storyboard/Base.lproj/LibraryBooks.storyboard; sourceTree = "<group>"; };
 		8561C16E27316DA90013A359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BookStore/Storyboard/Base.lproj/LibrarySubCategory.storyboard; sourceTree = "<group>"; };
 		8561C1722731964D0013A359 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		8561F202275C9ABA005E59A8 /* ReaderControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderControlView.swift; sourceTree = "<group>"; };
+		8561F204275C9ACB005E59A8 /* ReaderControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReaderControlView.xib; sourceTree = "<group>"; };
+		8561F2072765B404005E59A8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		8561F2292766301C005E59A8 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		85641A8F26FF2A1A00EF5D32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85641A9527006BED00EF5D32 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		8564E3B4274E7E800039A20A /* TxtReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtReaderViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +188,24 @@
 			path = LibraryBooks;
 			sourceTree = "<group>";
 		};
+		8561F201275C9A8E005E59A8 /* ReaderControlView */ = {
+			isa = PBXGroup;
+			children = (
+				8561F202275C9ABA005E59A8 /* ReaderControlView.swift */,
+				8561F204275C9ACB005E59A8 /* ReaderControlView.xib */,
+			);
+			path = ReaderControlView;
+			sourceTree = "<group>";
+		};
+		8561F2062765B3D6005E59A8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8561F2072765B404005E59A8 /* UIColor+Extension.swift */,
+				8561F2292766301C005E59A8 /* UIFont+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		8564E3B3274E7E5D0039A20A /* TxtReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +294,7 @@
 		85A7511F2732D5E50093E374 /* Unit View */ = {
 			isa = PBXGroup;
 			children = (
+				8561F201275C9A8E005E59A8 /* ReaderControlView */,
 				857AD9FC2737CF6F006BA232 /* HorizontalCollectionView */,
 				857AD9FD2737CF7C006BA232 /* BookCollectionViewCell */,
 			);
@@ -309,6 +336,7 @@
 				85AA7EC626F880E300558298 /* Model */,
 				85A7511F2732D5E50093E374 /* Unit View */,
 				8568C9CA26F8928400752453 /* Controller */,
+				8561F2062765B3D6005E59A8 /* Extension */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -384,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85AA7EB426F869D900558298 /* LaunchScreen.storyboard in Resources */,
+				8561F205275C9ACB005E59A8 /* ReaderControlView.xib in Resources */,
 				8561C15B27316A5A0013A359 /* Overview.storyboard in Resources */,
 				8573D6BA2736693200964EEE /* Login.storyboard in Resources */,
 				8561C16127316ADB0013A359 /* Library.storyboard in Resources */,
@@ -412,11 +441,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				858B01F82712A5EB00E3EC00 /* UserManager.swift in Sources */,
+				8561F203275C9ABB005E59A8 /* ReaderControlView.swift in Sources */,
 				85EDA3A32707FD4D004894DC /* PreferenceViewController.swift in Sources */,
 				8570D93C2740BB6A008879AC /* SearchViewController.swift in Sources */,
 				85740A632711D8640007B156 /* PreferenceSetting.swift in Sources */,
 				85641A9126FF2A1A00EF5D32 /* LoginViewController.swift in Sources */,
 				8539D92627034D9D00EA39FD /* BookShelfViewController.swift in Sources */,
+				8561F2082765B405005E59A8 /* UIColor+Extension.swift in Sources */,
 				8568C9D226F9CFFE00752453 /* LibrarySubCategoryViewController.swift in Sources */,
 				8564E3BC27523BB50039A20A /* BorrowingViewController.swift in Sources */,
 				85AA7EC826F880F300558298 /* Book.swift in Sources */,
@@ -430,6 +461,7 @@
 				8568C9DB26FAE1E000752453 /* BookDetailViewController.swift in Sources */,
 				85740A6127119D330007B156 /* DeviceManager.swift in Sources */,
 				8561C1732731964D0013A359 /* InformationViewController.swift in Sources */,
+				8561F22A2766301D005E59A8 /* UIFont+Extension.swift in Sources */,
 				85AA7EC426F87A8400558298 /* HorizontalCollectionView.swift in Sources */,
 				8564E3B5274E7E800039A20A /* TxtReaderViewController.swift in Sources */,
 				8568C9D026F9888200752453 /* LibraryCategory.swift in Sources */,
