@@ -26,7 +26,17 @@ class PdfReaderViewController: UIViewController
         super.viewDidLoad()
         setReader()
         openBook()
+        
+        navigationController?.isNavigationBarHidden = true
     }
+    
+    @IBAction func tapOnPdfView(_ sender: UITapGestureRecognizer)
+    {
+        // 顯示/隱藏navigation bar
+        guard let barHiddenStatus = navigationController?.isNavigationBarHidden else { return }
+        navigationController?.setNavigationBarHidden(!barHiddenStatus, animated: true)
+    }
+    
     
     // MARK: - Private method
     private func setReader()
